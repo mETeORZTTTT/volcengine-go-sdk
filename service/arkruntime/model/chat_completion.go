@@ -29,6 +29,7 @@ const (
 )
 
 type ChatMessageImageURL struct {
+	FileID    string         `json:"file_id,omitempty"`
 	URL       string         `json:"url,omitempty"`
 	Detail    ImageURLDetail `json:"detail,omitempty"`
 	MinPixels *int64         `json:"min_pixels,omitempty"`
@@ -36,8 +37,9 @@ type ChatMessageImageURL struct {
 }
 
 type ChatMessageVideoURL struct {
-	URL string   `json:"url"`
-	FPS *float64 `json:"fps,omitempty"`
+	FileID string   `json:"file_id,omitempty"`
+	URL    string   `json:"url,omitempty"`
+	FPS    *float64 `json:"fps,omitempty"`
 }
 
 type ChatMessageAudioURL struct {
